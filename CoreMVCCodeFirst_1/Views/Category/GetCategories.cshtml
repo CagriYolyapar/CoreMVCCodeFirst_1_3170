@@ -1,0 +1,31 @@
+﻿@model GetCategoriesPageVM
+
+Yeni kategori eklemek icin <a asp-controller="Category" asp-action="CreateCategory">tıklayınız</a>
+
+<h3>Kategoriler</h3>
+
+<h5 style="color:red">@TempData["message"]</h5>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Kategori ID</th>
+            <th>Kategori Ismi</th>
+            <th>Kategori Acıklaması</th>
+            <th>Guncelleme</th>
+            <th>Silme</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category item in Model.Categories)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                <td> <a class="btn btn-warning" asp-route-id="@item.ID" asp-controller="Category" asp-action="UpdateCategory" >Guncelle</a>   </td>
+                <td><a class="btn btn-danger" asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@item.ID">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

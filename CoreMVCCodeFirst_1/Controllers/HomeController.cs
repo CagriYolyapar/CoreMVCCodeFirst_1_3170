@@ -1,4 +1,5 @@
 using CoreMVCCodeFirst_1.Models;
+using CoreMVCCodeFirst_1.Models.ContextClasses;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

@@ -1,0 +1,21 @@
+﻿@model CreateCategoryPageVM
+
+
+
+
+<form asp-controller="Category" asp-action="CreateCategory" method="post">
+    <div class="mb-3">
+        <label class="form-label">Kategori Ismi</label>
+        <input type="text" asp-for="Category.CategoryName" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Aciklaması</label>
+        <textarea class="form-control" asp-for="Category.Description"></textarea>
+    </div>
+
+    <button class="btn btn-primary">
+        Ekle
+    </button>
+
+</form>
