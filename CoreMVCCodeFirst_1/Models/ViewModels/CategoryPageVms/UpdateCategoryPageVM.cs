@@ -1,6 +1,6 @@
 ﻿using CoreMVCCodeFirst_1.Models.Entities;
 
-namespace CoreMVCCodeFirst_1.Models.ViewModels
+namespace CoreMVCCodeFirst_1.Models.ViewModels.CategoryPageVms
 {
     public class UpdateCategoryPageVM
     {

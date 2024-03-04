@@ -1,6 +1,6 @@
 ﻿using CoreMVCCodeFirst_1.Models.ContextClasses;
 using CoreMVCCodeFirst_1.Models.Entities;
-using CoreMVCCodeFirst_1.Models.ViewModels;
+using CoreMVCCodeFirst_1.Models.ViewModels.CategoryPageVms;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreMVCCodeFirst_1.Controllers

@@ -1,0 +1,36 @@
+﻿@model CreateUpdateProductPageVM
+
+<form asp-controller="Product" asp-action="UpdateProduct" method="post" class="form">
+
+    <input type="hidden" asp-for="Product.ID"/>
+    <div>
+        <input asp-for="Product.ProductName" class="form-control" placeholder="Urun ismi giriniz" />
+    </div>
+
+    <br /> <br />
+
+    <div>
+        <input type="number" asp-for="Product.UnitPrice" class="form-control" placeholder="Urun fiyatı giriniz" />
+    </div>
+    <br />
+    <br />
+    <div>
+
+     
+
+        <select asp-for="Product.CategoryID" asp-items='new SelectList(Model.Categories,"ID","CategoryName")'>
+            <option>
+                Lutfen seciniz
+            </option>
+
+        </select>
+
+    </div>
+    <br /> <br />
+
+    <div>
+        <button class="btn btn-primary">
+            Güncelle
+        </button>
+    </div>
+</form>

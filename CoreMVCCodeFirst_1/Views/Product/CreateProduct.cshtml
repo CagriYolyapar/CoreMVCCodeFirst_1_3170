@@ -1,0 +1,36 @@
+﻿@model CreateUpdateProductPageVM
+
+<form asp-controller="Product" asp-action="CreateProduct" method="post" class="form">
+    <div>
+        <input asp-for="Product.ProductName" class="form-control" placeholder="Urun ismi giriniz"/>
+    </div>
+
+    <br /> <br />
+
+    <div>
+        <input type="number" asp-for="Product.UnitPrice" class="form-control" placeholder="Urun fiyatı giriniz"/>
+    </div>
+    <br />
+    <br />
+    <div>
+
+        @*
+            Alt taraftaki select yapısında asp-items attribute'u ilgili combobox'in icerisine hangi elemanların doldurulacagını bilebilmesi icin sizden SelectList tipinde bir koleksiyon ister...Bu tip ile icerisinden bir eleman secilebilecek bir koleksiyon barındırılacagını söylemiş olduk...Bu SelectList, constructor argumanlarıyla sırasıyla koleksiyonun kendisini, elemanların arkasında saklayacagı value'yu (ID) ve kullanıcıya gösterilecek olan display member'i ister. Siz de bu combobox'tan bie secim yaparsanız bu secilen elemanın arkasındaki deger asp-for ile modelbinding yaptıgınız property'e atanır..
+        *@
+
+        <select asp-for="Product.CategoryID" asp-items='new SelectList(Model.Categories,"ID","CategoryName")'>
+            <option>
+                Lutfen seciniz
+            </option>
+
+        </select>
+
+    </div>
+    <br /> <br />
+
+    <div>
+        <button class="btn btn-primary">
+            Ekle
+        </button>
+    </div>
+</form>
